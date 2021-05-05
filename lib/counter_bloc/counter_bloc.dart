@@ -13,6 +13,8 @@ class CounterBloc extends Bloc<CounterEvent, CounterState>{
 
    if (event is AddCounter){
       yield CounterState(state.counter + 1);
+   } else if (event is SubCounter) {
+     yield CounterState(state.counter -1);
    }
   }
 }
